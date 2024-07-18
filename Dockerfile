@@ -1,4 +1,5 @@
-FROM riderlty/python-with-packagess
+FROM riderlty/python-with-packages
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r /requirements.txt && pip install --no-cache-dir pyinstaller easyass
+RUN pip install --no-cache-dir -r /requirements.txt 
+RUN rm -rf /requirements.txt
 CMD ["bash"]
